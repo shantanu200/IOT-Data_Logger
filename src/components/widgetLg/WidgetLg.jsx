@@ -13,10 +13,10 @@ export default function WidgetLg({data}) {
       <table className="widgetLgTable">
         <tr className="widgetLgTr">
           <th className="widgetLgTh">ID</th>
-          <th className="widgetLgTh">Temperature</th>
-          <th className="widgetLgTh">Humidity</th>
-          <th className="widgetLgTh">GasLevel</th>
-          <th className="widgetLgTh">CreatedAT</th>
+          <th className="widgetLgTh">Temperature(°C)</th>
+          <th className="widgetLgTh">Humidity(%)</th>
+          <th className="widgetLgTh">GasLevel(kPa)</th>
+          <th className="widgetLgTh">Date And Time</th>
         </tr>
         {data.slice(0,10).map((val,key) => {
         return(<tr className="widgetLgTr" key={key}>
@@ -26,7 +26,7 @@ export default function WidgetLg({data}) {
           <td className="widgetLgDate">
             {val.gasLevel}
           </td>
-          <td className="widgetLgDate">{val.createdAt}</td>
+          <td className="widgetLgDate">{new Date(val.createdAt).toDateString()}</td>
 
         </tr>)
         })}

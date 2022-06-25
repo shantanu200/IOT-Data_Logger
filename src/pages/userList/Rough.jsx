@@ -1,25 +1,23 @@
+import axios from 'axios';
+import React,{useState,useEffect} from 'react'
 import "./userList.css";
-import { DataGrid } from "@material-ui/data-grid";
-import { DeleteOutline } from "@material-ui/icons";
-import { userRows } from "../../dummyData";
-import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
-import axios from "axios";
-import Rough from "./Rough";
+import { DataGrid } from '@material-ui/data-grid';
 
-export default function UserList() {
-  
+
+
+const Rough = () => {
+   let count = 0;
+
   const columns = [
     {headerName:"ID",field:"_id",width: 300},
     {headerName:"Temperature" ,field:"temperature" ,width: 300},
-    {headerName:"Date and Time",field:"date",width:300}
+    {headerName:"Date and Time",field:"createdAt",width:300}
   ]
   const [data,setData] = useState([]);
-  
   useEffect(() => {
     axios.get("http://localhost:8080/record")
     .then((res) => {
-        setData(res.data.reverse());
+        setData(res.data);
     })
   },[]);
 
@@ -36,3 +34,5 @@ export default function UserList() {
     </div>
   )
 }
+
+export default Rough

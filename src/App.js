@@ -11,6 +11,8 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import Humidity from "./pages/Humidity/Humidity";
+import GasLevel from "./pages/GasLevel/GasLevel";
 
 
 function App() {
@@ -38,10 +40,10 @@ function App() {
         <Sidebar />
         <Switch>
           <Route exact path="/">
-            <Home data={data}  />
+            <Home data={data}/>
           </Route>
           <Route path="/temperature">
-            <UserList data={data}/>
+            <UserList gdata={data}/>
           </Route>
           <Route path="/user/:userId">
             <User />
@@ -49,8 +51,11 @@ function App() {
           <Route path="/newUser">
             <NewUser />
           </Route>
-          <Route path="/products">
-            <ProductList />
+          <Route path="/humidity">
+            <Humidity />
+          </Route>
+          <Route path="/gasLevel">
+            <GasLevel />
           </Route>
           <Route path="/product/:productId">
             <Product />

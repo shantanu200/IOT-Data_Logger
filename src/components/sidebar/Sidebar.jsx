@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        <div className="sidebarMenu">
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
@@ -38,7 +38,7 @@ export default function Sidebar() {
               Sales
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
@@ -48,23 +48,26 @@ export default function Sidebar() {
                 Temperature
               </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/humidity" className="link">
               <li className="sidebarListItem">
                 <Storefront className="sidebarIcon" />
                 Humidity
               </li>
             </Link>
+            <Link to="/gaslevel" className="link">
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Gas Level
             </li>
+            </Link>
+            
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
             </li>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -97,7 +100,7 @@ export default function Sidebar() {
               Reports
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

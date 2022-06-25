@@ -12,7 +12,7 @@ export default function WidgetSm({data}) {
            <li className="widgetSmListItem">
            <div className="widgetSmUser">
             <span className="widgetSmUsername">Temperature</span>
-            <span className="widgetSmUserTitle">{val.temperature}</span>
+            <span className="widgetSmUserTitle">{val.temperature} °C</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />

@@ -12,7 +12,7 @@ export default function FeaturedInfo({data}) {
        <div className="featuredItem">
         <span className="featuredTitle">Temperature</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">{val.temperature}</span>
+          <span className="featuredMoney">{val.temperature} °C</span>
 
         </div>
         <span className="featuredSub">Compared to last month</span>
@@ -20,7 +20,7 @@ export default function FeaturedInfo({data}) {
       <div className="featuredItem">
         <span className="featuredTitle">Humidty</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">{val.humidity}</span>
+          <span className="featuredMoney">{val.humidity} %</span>
           
         </div>
         <span className="featuredSub">Compared to last month</span>
@@ -28,11 +28,10 @@ export default function FeaturedInfo({data}) {
       <div className="featuredItem">
         <span className="featuredTitle">Gas Level</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">{val.gasLevel}</span>
+          <span className="featuredMoney">{val.gasLevel} kPa</span>
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
-        
           </>
         )
       })}
